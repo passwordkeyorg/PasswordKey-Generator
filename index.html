@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordKey - Advanced Password Generator for Secure Online Protection</title>
+    <meta name="description" content="By integrating a master password with specific site tags, PasswordKey enhances your online security and simplifies the password management process, adhering to stringent security standards.">
+    <meta name="keywords" content="Password Generator, Strong Passwords, Secure Password, Online Security, Password Management, Digital Safety">
+    <meta name="author" content="PasswordKey.org Entire website content developed using ChatGPT by OpenAI.">
+    <meta property="og:title" content="PasswordKey - Advanced Password Generator for Secure Online Protection">
+    <meta property="og:description" content="Create strong, unique passwords for all your accounts with our simple and secure password generator. Easy to use, hard to crack." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:url" content="https://passwordkey.org/" />
+    <meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://passwordkey.org/" >
+    <meta property="twitter:title" content="PasswordKey - Secure Password Generator" />
+    <meta property="twitter:description" content="Generate strong, unique passwords for all your accounts with PasswordKey. Easy, secure, and effective password management." />
+    <meta property="twitter:image" content="/twitter-image.png" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://passwordkey.org/">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PasswordKey</h1>
+        </div>
+        
+        <form id="passwordForm" class="form-content">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <label for="site-tag">Password Name (Site Tag):</label>
+                  </td>
+                  <td>
+                    <input type="text" id="site-tag" required />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="master-key">Master Key:</label>
+                  </td>
+                  <td>
+                    <input type="password" id="master-key" required />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="password-length"
+                      >Password Length: <span id="length-display">20</span></label
+                    >
+                  </td>
+                  <td>
+                    <input
+                      type="range"
+                      id="password-length"
+                      class="slider"
+                      min="6"
+                      max="32"
+                      value="20"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="generateButton-wrapper" colspan="2">
+                    <button type="button" id="generateButton">Generate Password</button>
+                  </td>
+                </tr>
+                <tr>
+				<td class="output" colspan="2">
+					<span id="generated-password"></span>
+				</td>
+			</tr>
+              </tbody>
+            </table>
+          </form>
+          
+			<div class="description">
+            <h3>About PasswordKey</h3>
+            <p>The "PasswordKey" website offers an innovative approach to enhance your digital security. It uniquely combines the use of a master password and distinct site tags to manage and secure your online accounts. This dual-component system simplifies the task of remembering numerous passwords while maintaining a high level of security.</p>
+
+            <h3>User Input Process:</h3>
+            <p><strong>Password Name (Site Tag):</strong> Users enter a memorable name or tag for each password. This identifier helps in recognizing the purpose or the site for which the password is generated, ensuring easy management.</p>
+            <p><strong>Master Key:</strong> A central, secure key set and remembered by the user. It forms a crucial part of the password generation algorithm, guaranteeing both uniqueness and security for every password created.</p>
+            <p><strong>Password Length:</strong> The website features a slider allowing users to adjust the length of the generated password. This lets users find a balance between a password's security level and its memorability.</p>
+
+            <strong>Password Generation Algorithm:</strong>
+            <p>The website utilizes a combination of the user-provided site tag and the master key to create a base input for each password. A cryptographic hash function, like SHA-256, processes this base input to generate a unique and complex string of characters. The algorithm then applies rules for character diversity, including the use of uppercase, lowercase, numbers, and special characters, to extract a password of the desired length from this complex string.</p>
+
+            <p><strong>Secure and Untraceable:</strong> Each site's password is distinct and designed to be secure. By generating a unique password for each site or resource, the "Password Generator" significantly elevates your online safety.</p>
+            <p><strong>Reliable Safety Management:</strong> It ensures that even if one password is compromised, your other accounts remain protected. You can retrieve any password at any time by revisiting the form and entering the same site tag and master key combination.</p>
+
+            <p>This approach offers a practical yet highly secure method of managing digital security, striking an essential balance between accessibility and robust protection in the digital age.</p>
+		
+		
+		</div>
+		<footer class="footer">
+            <p>© PasswordKey 2024. All rights reserved.</p>
+            <p>Entire website content developed using ChatGPT by OpenAI.</p>
+        </footer>
+    </div>
+
+    <script src="password-generator.js" defer></script>
+</body>
+</html>
