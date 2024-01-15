@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordKey - Gerador avançado de senhas para proteção online segura</title>
+	<meta name="description" content="Ao integrar uma senha mestra com etiquetas específicas do site, o PasswordKey melhora sua segurança online e simplifica o processo de gerenciamento de senhas, seguindo rigorosos padrões de segurança.">
+	<meta name="keywords" content="Gerador de senhas, Senhas fortes, Senha segura, Segurança online, Gerenciamento de senhas, Segurança digital">
+	<meta name="author" content="PasswordKey.org Todo o conteúdo do site foi desenvolvido usando o ChatGPT da OpenAI.">
+	<meta property="og:title" content="PasswordKey - Gerador avançado de senhas para proteção online segura">
+	<meta property="og:description" content="Crie senhas fortes e únicas para todas as suas contas com nosso gerador de senhas simples e seguro. Fácil de usar, difícil de quebrar." />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:url" content="https://passwordkey.org/" />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://passwordkey.org/" >
+	<meta property="twitter:title" content="PasswordKey - Gerador de senhas seguro" />
+	<meta property="twitter:description" content="Gere senhas fortes e únicas para todas as suas contas com o PasswordKey. Fácil, seguro e eficaz no gerenciamento de senhas." />
+    <meta property="twitter:image" content="/twitter-image.png" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://passwordkey.org/pt/">
+	<link rel="alternate" hreflang="en" href="https://passwordkey.org/" />
+	<link rel="alternate" hreflang="es" href="https://passwordkey.org/es/" />
+	<link rel="alternate" hreflang="de" href="https://passwordkey.org/de/" />
+	<link rel="alternate" hreflang="fr" href="https://passwordkey.org/fr/" />
+	<link rel="alternate" hreflang="zh" href="https://passwordkey.org/zh/" />
+	<link rel="alternate" hreflang="ar" href="https://passwordkey.org/ar/" />
+	<link rel="alternate" hreflang="hi" href="https://passwordkey.org/hi/" />
+	<link rel="alternate" hreflang="ja" href="https://passwordkey.org/ja/" />
+	<link rel="alternate" hreflang="pt" href="https://passwordkey.org/pt/" />
+	<link rel="alternate" hreflang="ru" href="https://passwordkey.org/ru/" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PasswordKey</h1>
+			<select id="language-selector" class="language-selector">
+				<option value="ar">Árabe - العربية</option>
+				<option value="zh">Chinês - 中文</option>
+				<option value="en">Inglês - English</option>
+				<option value="fr">Francês - Français</option>
+				<option value="de">Alemão - Deutsch</option>
+				<option value="hi">Hindi - हिंदी</option>
+				<option value="ja">Japonês - 日本語</option>
+				<option value="pt" selected>Português</option>
+				<option value="ru">Russo - Русский</option>
+				<option value="es">Espanhol - Español</option>
+			</select>
+        </div>
+        
+        <form id="passwordForm" class="form-content">
+            <table>
+              <tbody>
+                <tr>
+  <td>
+    <label for="site-tag">Nome da Senha (Tag do Site):</label>
+  </td>
+  <td>
+    <input type="text" id="site-tag" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="master-key">Chave Mestra:</label>
+  </td>
+  <td>
+    <input type="password" id="master-key" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="password-length">Comprimento da Senha: <span id="length-display">20</span></label>
+  </td>
+  <td>
+    <input
+      type="range"
+      id="password-length"
+      class="slider"
+      min="6"
+      max="32"
+      value="20"
+    />
+  </td>
+</tr>
+<tr>
+  <td class="generateButton-wrapper" colspan="2">
+    <button type="button" id="generateButton">Gerar Senha</button>
+  </td>
+</tr>
+
+                <tr>
+				<td class="output" colspan="2">
+					<span id="generated-password"></span>
+				</td>
+			</tr>
+              </tbody>
+            </table>
+          </form>
+          
+			<div class="description">
+            <strong>Sobre o PasswordKey</strong>
+
+			<p>O website "PasswordKey" oferece uma abordagem inovadora para melhorar a sua segurança digital. Combina de forma única o uso de uma senha mestra e tags de site distintas para gerenciar e proteger as suas contas online. Esse sistema de dois componentes simplifica a tarefa de lembrar de diversas senhas mantendo um alto nível de segurança.</p>
+			<strong>Processo de Entrada do Usuário:</strong>
+
+			<p>Nome da Senha (Tag do Site): O Nome da Senha, também conhecido como Tag do Site, é um identificador único que os usuários criam para cada uma de suas senhas. Por exemplo, um usuário pode usar "Email" como a tag do site para sua conta de e-mail e "Redes Sociais" para sua conta de mídia social. Esse sistema permite o reconhecimento e gerenciamento fáceis de senhas para diferentes serviços online.</p>
+			<p>Chave Mestra: A Chave Mestra é semelhante a uma senha pessoal. É uma chave privada e segura que o usuário cria e memoriza. Pense nela como a senha principal que, combinada com as tags do site, forma a base para cada senha única. É semelhante a ter uma chave que pode abrir várias fechaduras quando usada com a combinação correta.</p>
+			<p>Em resumo, diferentes combinações de tags de site e a Chave Mestra geram senhas diferentes. Esse sistema de dois componentes aumenta a segurança criando senhas únicas e fortes para cada uma de suas contas online, gerenciando efetivamente a sua presença digital.</p>
+			<strong>Algoritmo de Geração de Senhas:</strong>
+
+			<p>O website utiliza uma combinação da tag de site fornecida pelo usuário e a Chave Mestra para criar uma entrada base para cada senha. Uma função de hash criptográfica, como o SHA-256, processa essa entrada base para gerar uma sequência única e complexa de caracteres. O algoritmo então aplica regras para a diversidade de caracteres, incluindo o uso de maiúsculas, minúsculas, números e caracteres especiais, para extrair uma senha do tamanho desejado a partir dessa sequência complexa.</p>
+			<strong>Processamento Local para Maior Segurança</strong>
+
+			<p>Com o PasswordKey, cada processo de geração de senha ocorre diretamente no seu dispositivo, sem ser transmitido ou armazenado nos nossos servidores, aumentando significativamente a segurança dos seus dados. Isso garante privacidade e segurança absolutas durante todo o processo.</p>
+			<strong>Senhas Únicas para Cada Site</strong>
+
+			<p>O PasswordKey permite a criação de senhas diferentes para cada uma das suas contas online. Essa abordagem é vital para minimizar os riscos associados a uma conta comprometida, efetivamente prevenindo um efeito dominó no qual uma violação poderia colocar várias contas em risco. Ao garantir que cada conta tenha uma senha única, aumentamos a segurança geral da sua identidade digital.</p>
+			<strong>Experiência do Usuário Simplificada</strong>
+
+			<p>O PasswordKey combina segurança avançada com uma interface amigável, focando na simplicidade e eficácia na nossa filosofia de design. Com o PasswordKey, você não precisa lembrar senhas longas e complexas; basta inserir a mesma tag e senha mestra toda vez, e a sua senha segura estará pronta. Esse método simplifica todo o processo enquanto garante que a sua segurança não seja comprometida.</p>
+			<strong>Defesa de Contas: Seu Guardião Digital</strong>
+
+			<p>No mundo digital, a segurança de contas é essencial. Ao escolher o PasswordKey, você está selecionando um parceiro confiável que combina tecnologia inovadora com um profundo entendimento de segurança, fornecendo proteção robusta para a sua identidade digital. Comprometemo-nos a atender às necessidades de segurança personalizadas de cada usuário, tornando o PasswordKey um guardião constante na sua vida digital.</p>
+			<strong>Compromisso de Serviço a Longo Prazo</strong>
+
+			<p>O PasswordKey está comprometido em ser uma solução duradoura na sua vida digital. A nossa promessa é oferecer um serviço confiável e sustentado, indo além de soluções temporárias. Hospedado em serviços de nuvem robustos para acessibilidade consistente, garantimos que o PasswordKey seja uma ferramenta confiável e em constante evolução no mundo digital em constante mudança, respaldado pela tecnologia avançada do ChatGPT.</p>
+		
+		</div>
+		<footer class="footer">
+            <p>© PasswordKey 2024. Todos os direitos reservados.</p>
+<p>Nós não armazenamos nenhuma senha.</p>
+
+        </footer>
+    </div>
+
+    <script src="password-generator.js" defer></script>
+	<script>
+    document.getElementById('language-selector').addEventListener('change', function(event) {
+        var selectedLang = event.target.value;
+        if (selectedLang === 'en') {
+            window.location.href = 'https://passwordkey.org/';
+        } else {
+            window.location.href = 'https://passwordkey.org/' + selectedLang + '/';
+        }
+    });
+</script>
+</body>
+</html>

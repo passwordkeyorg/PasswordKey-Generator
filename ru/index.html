@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordKey - Продвинутый генератор паролей для надежной онлайн-защиты</title>
+	<meta name="description" content="Путем интеграции мастер-пароля с определенными метками сайта PasswordKey повышает вашу онлайн-безопасность и упрощает процесс управления паролями, соблюдая строгие стандарты безопасности.">
+	<meta name="keywords" content="Генератор паролей, Надежные пароли, Безопасные пароли, Онлайн-безопасность, Управление паролями, Цифровая безопасность">
+	<meta name="author" content="PasswordKey.org Весь контент сайта разработан с использованием ChatGPT от OpenAI.">
+	<meta property="og:title" content="PasswordKey - Продвинутый генератор паролей для надежной онлайн-защиты">
+	<meta property="og:description" content="Создавайте надежные и уникальные пароли для всех своих аккаунтов с помощью нашего простого и безопасного генератора паролей. Легко использовать, сложно взломать." />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:url" content="https://passwordkey.org/" />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://passwordkey.org/" >
+	<meta property="twitter:title" content="PasswordKey - Безопасный генератор паролей" />
+	<meta property="twitter:description" content="Генерируйте надежные и уникальные пароли для всех своих аккаунтов с PasswordKey. Просто, безопасно и эффективно в управлении паролями." />
+    <meta property="twitter:image" content="/twitter-image.png" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://passwordkey.org/ru/">
+	<link rel="alternate" hreflang="en" href="https://passwordkey.org/" />
+	<link rel="alternate" hreflang="es" href="https://passwordkey.org/es/" />
+	<link rel="alternate" hreflang="de" href="https://passwordkey.org/de/" />
+	<link rel="alternate" hreflang="fr" href="https://passwordkey.org/fr/" />
+	<link rel="alternate" hreflang="zh" href="https://passwordkey.org/zh/" />
+	<link rel="alternate" hreflang="ar" href="https://passwordkey.org/ar/" />
+	<link rel="alternate" hreflang="hi" href="https://passwordkey.org/hi/" />
+	<link rel="alternate" hreflang="ja" href="https://passwordkey.org/ja/" />
+	<link rel="alternate" hreflang="pt" href="https://passwordkey.org/pt/" />
+	<link rel="alternate" hreflang="ru" href="https://passwordkey.org/ru/" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PasswordKey</h1>
+			<select id="language-selector" class="language-selector">
+				<option value="ar">Арабский - العربية</option>
+				<option value="zh">Китайский - 中文</option>
+				<option value="en">Английский - English</option>
+				<option value="fr">Французский - Français</option>
+				<option value="de">Немецкий - Deutsch</option>
+				<option value="hi">Хинди - हिंदी</option>
+				<option value="ja">Японский - 日本語</option>
+				<option value="pt">Португальский - Português</option>
+				<option value="ru" selected>Русский</option>
+				<option value="es">Испанский - Español</option>
+			</select>
+        </div>
+        
+        <form id="passwordForm" class="form-content">
+            <table>
+              <tbody>
+                <tr>
+  <td>
+    <label for="site-tag">Имя пароля (тег сайта):</label>
+  </td>
+  <td>
+    <input type="text" id="site-tag" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="master-key">Мастер-ключ:</label>
+  </td>
+  <td>
+    <input type="password" id="master-key" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="password-length">Длина пароля: <span id="length-display">20</span></label>
+  </td>
+  <td>
+    <input
+      type="range"
+      id="password-length"
+      class="slider"
+      min="6"
+      max="32"
+      value="20"
+    />
+  </td>
+</tr>
+<tr>
+  <td class="generateButton-wrapper" colspan="2">
+    <button type="button" id="generateButton">Создать пароль</button>
+  </td>
+</tr>
+
+                <tr>
+				<td class="output" colspan="2">
+					<span id="generated-password"></span>
+				</td>
+			</tr>
+              </tbody>
+            </table>
+          </form>
+          
+			<div class="description">
+            <strong>О PasswordKey</strong>
+
+			<p>Веб-сайт "PasswordKey" предлагает инновационный подход для улучшения вашей цифровой безопасности. Он уникально объединяет использование мастер-пароля и отдельных меток сайтов для управления и защиты ваших онлайн-аккаунтов. Эта система из двух компонентов упрощает задачу запоминания множества паролей, сохраняя при этом высокий уровень безопасности.</p>
+			<strong>Процесс ввода пользователя:</strong>
+
+			<p>Имя пароля (Метка сайта): Имя пароля, также известное как Метка сайта, является уникальным идентификатором, который пользователи создают для каждого из своих паролей. Например, пользователь может использовать "Email" как метку сайта для своей электронной почты и "Социальные сети" для своего аккаунта в социальных сетях. Эта система позволяет легко распознавать и управлять паролями для различных онлайн-сервисов.</p>
+			<p>Мастер-ключ: Мастер-ключ аналогичен персональному паролю. Это частный и безопасный ключ, который пользователь создает и запоминает. Можно представить его как основной пароль, который в сочетании с метками сайтов формирует основу для каждого уникального пароля. Это похоже на наличие одного ключа, который может открывать несколько замков, когда используется правильная комбинация.</p>
+			<p>В заключение, разные комбинации меток сайтов и мастер-ключа генерируют разные пароли. Эта двухкомпонентная система повышает безопасность, создавая уникальные и надежные пароли для каждого из ваших онлайн-аккаунтов, эффективно управляя вашим цифровым следом.</p>
+			<strong>Алгоритм генерации паролей:</strong>
+
+			<p>Сайт использует комбинацию метки сайта, предоставленной пользователем, и мастер-ключа для создания базового ввода для каждого пароля. Криптографическая хэш-функция, такая как SHA-256, обрабатывает этот базовый ввод для создания уникальной и сложной строки символов. Затем алгоритм применяет правила разнообразия символов, включая использование заглавных букв, строчных букв, цифр и специальных символов, для извлечения пароля заданной длины из этой сложной строки.</p>
+			<strong>Локальная обработка для усиления безопасности</strong>
+
+			<p>С PasswordKey каждый процесс генерации пароля происходит непосредственно на вашем устройстве, без передачи или хранения на наших серверах, что значительно повышает безопасность ваших данных. Это обеспечивает абсолютную конфиденциальность и безопасность на протяжении всего процесса.</p>
+			<strong>Уникальные пароли для каждого сайта</strong>
+
+			<p>PasswordKey позволяет создавать разные пароли для каждого из ваших онлайн-аккаунтов. Этот подход важен для минимизации рисков, связанных с компрометацией одного аккаунта, что эффективно предотвращает эффект домино, при котором одно нарушение может поставить под угрозу несколько аккаунтов. Гарантируя, что у каждого аккаунта есть уникальный пароль, мы повышаем общую безопасность вашей цифровой идентификации.</p>
+			<strong>Упрощенный пользовательский опыт</strong>
+
+			<p>PasswordKey объединяет продвинутую безопасность с дружелюбным интерфейсом, сосредотачиваясь на простоте и эффективности в нашей философии дизайна. С PasswordKey вам не нужно запоминать длинные и сложные пароли; просто введите одну и ту же метку и мастер-ключ каждый раз, и ваш безопасный пароль готов. Этот метод упрощает весь процесс и при этом обеспечивает сохранность вашей безопасности.</p>
+			<strong>Защита аккаунта: ваш цифровой страж</strong>
+
+			<p>В цифровом мире безопасность аккаунтов является важной. Выбирая PasswordKey, вы выбираете надежного партнера, который объединяет инновационные технологии с глубоким пониманием безопасности, обеспечивая надежную защиту вашей цифровой идентификации. Мы обязуемся удовлетворить индивидуальные потребности в безопасности каждого пользователя, делая PasswordKey постоянным стражем в вашей цифровой жизни.</p>
+			<strong>Долгосрочное обязательство по обслуживанию</strong>
+
+			<p>PasswordKey обязуется быть надежным решением в вашей цифровой жизни. Наше обещание - предоставить устойчивое и надежное обслуживание, превосходящее временные решения. Размещенный на надежных облачных сервисах для постоянной доступности, мы обеспечиваем, что PasswordKey является надежным и постоянно развивающимся инструментом в постоянно меняющемся цифровом мире, поддерживаемым передовой технологией ChatGPT.</p>
+		
+		</div>
+		<footer class="footer">
+            <p>© PasswordKey 2024. Все права защищены.</p>
+<p>Мы не храним пароли.</p>
+
+        </footer>
+    </div>
+
+    <script src="password-generator.js" defer></script>
+	<script>
+    document.getElementById('language-selector').addEventListener('change', function(event) {
+        var selectedLang = event.target.value;
+        if (selectedLang === 'en') {
+            window.location.href = 'https://passwordkey.org/';
+        } else {
+            window.location.href = 'https://passwordkey.org/' + selectedLang + '/';
+        }
+    });
+</script>
+</body>
+</html>

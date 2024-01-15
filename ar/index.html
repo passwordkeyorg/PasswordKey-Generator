@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="ar">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordKey - مولد كلمات مرور متقدم لحماية الأمان عبر الإنترنت</title>
+    <meta name="description" content="من خلال دمج كلمة مرور رئيسية مع علامات المواقع الخاصة، يعزز PasswordKey أمانك عبر الإنترنت ويبسط عملية إدارة كلمات المرور، ملتزماً بمعايير الأمان الصارمة.">
+    <meta name="keywords" content="مولد كلمات المرور، كلمات مرور قوية، كلمة مرور آمنة، أمان عبر الإنترنت، إدارة كلمات المرور، سلامة رقمية">
+    <meta name="author" content="PasswordKey.org محتوى الموقع بأكمله تم تطويره باستخدام ChatGPT من OpenAI.">
+    <meta property="og:title" content="PasswordKey - مولد كلمات مرور متقدم لحماية الأمان عبر الإنترنت">
+    <meta property="og:description" content="قم بإنشاء كلمات مرور قوية وفريدة لجميع حساباتك باستخدام مولد كلمات المرور البسيط والآمن لدينا. سهل الاستخدام وصعب الكسر." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:url" content="https://passwordkey.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://passwordkey.org/" >
+    <meta property="twitter:title" content="PasswordKey - مولد كلمات مرور آمن" />
+    <meta property="twitter:description" content="قم بإنشاء كلمات مرور قوية وفريدة لجميع حساباتك باستخدام PasswordKey. سهل وآمن وفعال لإدارة كلمات المرور." />
+    <meta property="twitter:image" content="/twitter-image.png" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://passwordkey.org/ar/">
+	<link rel="alternate" hreflang="en" href="https://passwordkey.org/" />
+	<link rel="alternate" hreflang="es" href="https://passwordkey.org/es/" />
+	<link rel="alternate" hreflang="de" href="https://passwordkey.org/de/" />
+	<link rel="alternate" hreflang="fr" href="https://passwordkey.org/fr/" />
+	<link rel="alternate" hreflang="zh" href="https://passwordkey.org/zh/" />
+	<link rel="alternate" hreflang="ar" href="https://passwordkey.org/ar/" />
+	<link rel="alternate" hreflang="hi" href="https://passwordkey.org/hi/" />
+	<link rel="alternate" hreflang="ja" href="https://passwordkey.org/ja/" />
+	<link rel="alternate" hreflang="pt" href="https://passwordkey.org/pt/" />
+	<link rel="alternate" hreflang="ru" href="https://passwordkey.org/ru/" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PasswordKey</h1>
+			<select id="language-selector" class="language-selector">
+				<option value="ar" selected>العربية</option>
+				<option value="zh">الصينية - 中文</option>
+				<option value="en">الإنجليزية - English</option>
+				<option value="fr">الفرنسية - Français</option>
+				<option value="de">الألمانية - Deutsch</option>
+				<option value="hi">الهندية - हिंदी</option>
+				<option value="ja">اليابانية - 日本語</option>
+				<option value="pt">البرتغالية - Português</option>
+				<option value="ru">الروسية - Русский</option>
+				<option value="es">الإسبانية - Español</option>
+			</select>
+
+
+
+        </div>
+        
+        <form id="passwordForm" class="form-content">
+            <table>
+              <tbody>
+                <tr>
+  <td>
+    <label for="site-tag">اسم كلمة المرور (وسم الموقع):</label>
+  </td>
+  <td>
+    <input type="text" id="site-tag" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="master-key">المفتاح الرئيسي:</label>
+  </td>
+  <td>
+    <input type="password" id="master-key" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="password-length">طول كلمة المرور: <span id="length-display">20</span></label>
+  </td>
+  <td>
+    <input
+      type="range"
+      id="password-length"
+      class="slider"
+      min="6"
+      max="32"
+      value="20"
+    />
+  </td>
+</tr>
+<tr>
+  <td class="generateButton-wrapper" colspan="2">
+    <button type="button" id="generateButton">إنشاء كلمة المرور</button>
+  </td>
+</tr>
+
+                <tr>
+				<td class="output" colspan="2">
+					<span id="generated-password"></span>
+				</td>
+			</tr>
+              </tbody>
+            </table>
+          </form>
+          
+			<div class="description">
+            <strong>حول PasswordKey</strong>
+
+			<p>موقع الويب "PasswordKey" يقدم نهجًا مبتكرًا لتعزيز أمانك الرقمي. يجمع بشكل فريد بين استخدام كلمة مرور رئيسية وعلامات الموقع المميزة لإدارة وتأمين حساباتك عبر الإنترنت. يبسط هذا النظام ذو العنصرين المزدوجين مهمة تذكر كلمات المرور العديدة مع الحفاظ على مستوى عالٍ من الأمان.</p>
+			<strong>عملية إدخال المستخدم:</strong>
+
+			<p>اسم كلمة المرور (علامة الموقع): اسم كلمة المرور ، المعروف أيضًا باسم علامة الموقع ، هو معرف فريد يقوم المستخدمون بإنشائه لكلمات المرور الخاصة بهم. على سبيل المثال، قد يستخدم المستخدم "البريد الإلكتروني" كعلامة لحساب البريد الإلكتروني الخاص به و "وسائل التواصل الاجتماعي" لحسابه على وسائل التواصل الاجتماعي. يتيح هذا النظام التعرف على كلمات المرور بسهولة وإدارتها لخدمات الإنترنت المختلفة.</p>
+			<p>المفتاح الرئيسي: المفتاح الرئيسي يشبه كلمة المرور الشخصية. إنه مفتاح خاص وآمن يقوم المستخدم بإنشائه وتذكره. اعتبرها كلمة مرور أساسية تتكامل مع علامات الموقع لتشكيل أساس لكل كلمة مرور فريدة. إنه مشابه لامتلاك مفتاح واحد يمكنه فتح أقفال متعددة عند استخدامه مع التركيبة الصحيحة.</p>
+			<p>باختصار، تولد تركيبات مختلفة من علامات الموقع والمفتاح الرئيسي كلمات مرور مختلفة. يزيد هذا النظام ذو العنصرين المزدوجين من الأمان من خلال إنشاء كلمات مرور فريدة وقوية لكل حساب عبر الإنترنت لديك، مما يسهم في إدارة بصمتك الرقمي بشكل فعّال.</p>
+			<strong>خوارزمية إنشاء كلمة المرور:</strong>
+
+			<p>يستخدم الموقع مزيجًا من علامة الموقع التي يقدمها المستخدم والمفتاح الرئيسي لإنشاء مدخل أساسي لكل كلمة مرور. تقوم وظيفة التجزئة الكريبتوغرافية، مثل SHA-256، بمعالجة هذا المدخل الأساسي لإنشاء سلسلة فريدة ومعقدة من الأحرف. ثم تطبق الخوارزمية قواعد لتنوع الأحرف، بما في ذلك استخدام الأحرف الكبيرة والصغيرة والأرقام والأحرف الخاصة، لاستخراج كلمة مرور بالطول المطلوب من هذه السلسلة المعقدة.</p>
+			<strong>معالجة محلية لتعزيز الأمان</strong>
+
+			<p>مع PasswordKey، يتم إجراء عملية إنشاء كلمة المرور في كل مرة مباشرة على جهازك، دون نقلها أو تخزينها على خوادمنا، مما يعزز بشكل كبير من أمان بياناتك. يضمن هذا الأمر الخصوصية والأمان التامين على مدار العملية بأكملها.</p>
+			<strong>كلمات مرور فريدة لكل موقع</strong>
+
+			<p>يمكن لـ PasswordKey إنشاء كلمات مرور مختلفة لكل حساب عبر الإنترنت لديك. هذا النهج ضروري لتقليل المخاطر المرتبطة بحساب واحد تم اختراقه، مما يمنع بشكل فعّال تأثير الدومينو حيث يمكن لاختراق واحد أن يعرض عدة حسابات للخطر. من خلال التأكد من وجود كلمة مرور فريدة لكل حساب، نعزز السلامة العامة لهويتك الرقمية.</p>
+			<strong>تجربة مستخدم مبسطة</strong>
+
+			<p>يجمع PasswordKey بين الأمان المتقدم وواجهة سهلة الاستخدام، مع التركيز على البساطة والفعالية في فلسفة تصميمنا. باستخدام PasswordKey، لا تحتاج إلى تذكر كلمات مرور طويلة ومعقدة؛ فقط أدخل نفس العلامة وكلمة المرور الرئيسية في كل مرة، وسيتم إعداد كلمة المرور الآمنة الخاصة بك. يبسط هذا الأسلوب العملية بأكملها مع ضمان عدم تعرض أمانك للخطر.</p>
+			<strong>حماية الحساب: حارسك الرقمي</strong>
+
+			<p>في العالم الرقمي، أمان الحسابات أمر ضروري. من خلال اختيار PasswordKey، أنت تختار شريكًا موثوقًا يجمع بين التكنولوجيا المبتكرة وفهم عميق للأمان، مما يوفر حماية قوية لهويتك الرقمية. نحن ملتزمون بتلبية احتياجات الأمان الشخصية لكل مستخدم، مما يجعل PasswordKey حارسًا مستقيمًا في حياتك الرقمية.</p>
+			<strong>التزام بالخدمة على المدى الطويل</strong>
+
+			<p>تلتزم PasswordKey بأن تكون حلاً دائمًا في حياتك الرقمية. عهدنا هو تقديم خدمة موثوقة ومستدامة، وذلك بتجاوز الحلول المؤقتة فقط. مستضافة على خدمات سحابية قوية لضمان إمكانية الوصول المستمرة، نضمن أن PasswordKey هو أداة موثوقة ومتطورة باستمرار في عالم الإنترنت المتغير باستمرار، مدعومة بتكنولوجيا ChatGPT المتقدمة.</p>
+		
+		</div>
+		<footer class="footer">
+            <p>© PasswordKey 2024. جميع الحقوق محفوظة.</p>
+<p>نحن لا نقوم بتخزين أي كلمات مرور</p>
+
+        </footer>
+    </div>
+
+    <script src="password-generator.js" defer></script>
+	<script>
+    document.getElementById('language-selector').addEventListener('change', function(event) {
+        var selectedLang = event.target.value;
+        if (selectedLang === 'en') {
+            window.location.href = 'https://passwordkey.org/';
+        } else {
+            window.location.href = 'https://passwordkey.org/' + selectedLang + '/';
+        }
+    });
+</script>
+</body>
+</html>

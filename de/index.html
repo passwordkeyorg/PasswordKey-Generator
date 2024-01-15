@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordKey - Fortgeschrittener Passwortgenerator für sicheren Online-Schutz</title>
+	<meta name="description" content="Durch die Integration eines Master-Passworts mit spezifischen Seiten-Tags verbessert PasswordKey Ihre Online-Sicherheit und vereinfacht den Passwortverwaltungsprozess unter Einhaltung strenger Sicherheitsstandards.">
+	<meta name="keywords" content="Passwortgenerator, Starke Passwörter, Sicheres Passwort, Online-Sicherheit, Passwortverwaltung, Digitale Sicherheit">
+	<meta name="author" content="PasswordKey.org Die gesamte Website wurde unter Verwendung von ChatGPT von OpenAI entwickelt.">
+	<meta property="og:title" content="PasswordKey - Fortgeschrittener Passwortgenerator für sicheren Online-Schutz">
+	<meta property="og:description" content="Erstellen Sie starke, einzigartige Passwörter für alle Ihre Konten mit unserem einfachen und sicheren Passwortgenerator. Einfach zu bedienen, schwer zu knacken." />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:url" content="https://passwordkey.org/" />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://passwordkey.org/" >
+	<meta property="twitter:title" content="PasswordKey - Sicherer Passwortgenerator" />
+	<meta property="twitter:description" content="Generieren Sie starke, einzigartige Passwörter für alle Ihre Konten mit PasswordKey. Einfach, sicher und effektiv bei der Passwortverwaltung." />
+    <meta property="twitter:image" content="/twitter-image.png" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://passwordkey.org/de/">
+	<link rel="alternate" hreflang="en" href="https://passwordkey.org/" />
+	<link rel="alternate" hreflang="es" href="https://passwordkey.org/es/" />
+	<link rel="alternate" hreflang="de" href="https://passwordkey.org/de/" />
+	<link rel="alternate" hreflang="fr" href="https://passwordkey.org/fr/" />
+	<link rel="alternate" hreflang="zh" href="https://passwordkey.org/zh/" />
+	<link rel="alternate" hreflang="ar" href="https://passwordkey.org/ar/" />
+	<link rel="alternate" hreflang="hi" href="https://passwordkey.org/hi/" />
+	<link rel="alternate" hreflang="ja" href="https://passwordkey.org/ja/" />
+	<link rel="alternate" hreflang="pt" href="https://passwordkey.org/pt/" />
+	<link rel="alternate" hreflang="ru" href="https://passwordkey.org/ru/" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PasswordKey</h1>
+			<select id="language-selector" class="language-selector">
+				<option value="ar">Arabisch - العربية</option>
+				<option value="zh">Chinesisch - 中文</option>
+				<option value="en">Englisch - English</option>
+				<option value="fr">Französisch - Français</option>
+				<option value="de" selected>Deutsch</option>
+				<option value="hi">Hindi - हिंदी</option>
+				<option value="ja">Japanisch - 日本語</option>
+				<option value="pt">Portugiesisch - Português</option>
+				<option value="ru">Russisch - Русский</option>
+				<option value="es">Spanisch - Español</option>
+			</select>
+        </div>
+        
+        <form id="passwordForm" class="form-content">
+            <table>
+              <tbody>
+                <tr>
+  <td>
+    <label for="site-tag">Passwortname (Seiten-Tag):</label>
+  </td>
+  <td>
+    <input type="text" id="site-tag" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="master-key">Hauptschlüssel:</label>
+  </td>
+  <td>
+    <input type="password" id="master-key" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="password-length">Passwortlänge: <span id="length-display">20</span></label>
+  </td>
+  <td>
+    <input
+      type="range"
+      id="password-length"
+      class="slider"
+      min="6"
+      max="32"
+      value="20"
+    />
+  </td>
+</tr>
+<tr>
+  <td class="generateButton-wrapper" colspan="2">
+    <button type="button" id="generateButton">Passwort generieren</button>
+  </td>
+</tr>
+
+                <tr>
+				<td class="output" colspan="2">
+					<span id="generated-password"></span>
+				</td>
+			</tr>
+              </tbody>
+            </table>
+          </form>
+          
+			<div class="description">
+            <strong>Über PasswordKey</strong>
+
+<p>Die Website "PasswordKey" bietet einen innovativen Ansatz zur Verbesserung Ihrer digitalen Sicherheit. Sie kombiniert einzigartig die Verwendung eines Master-Passworts und unterschiedlicher Seiten-Tags, um Ihre Online-Konten zu verwalten und zu sichern. Dieses duale Komponentensystem vereinfacht die Aufgabe, sich an zahlreiche Passwörter zu erinnern, während gleichzeitig ein hohes Maß an Sicherheit gewährleistet wird.</p>
+<strong>Benutzereingabeprozess:</strong>
+
+<p>Passwortname (Seiten-Tag): Der Passwortname, auch als Seiten-Tag bekannt, ist ein eindeutiger Kennzeichner, den Benutzer für jedes ihrer Passwörter erstellen. Zum Beispiel könnte ein Benutzer "E-Mail" als Seiten-Tag für sein E-Mail-Konto und "Soziale Medien" für sein Social-Media-Konto verwenden. Dieses System ermöglicht die einfache Erkennung und Verwaltung von Passwörtern für verschiedene Online-Dienste.</p>
+<p>Master-Key: Der Master-Key ähnelt einem persönlichen Passwort. Es ist ein privater und sicherer Schlüssel, den der Benutzer erstellt und sich merkt. Denken Sie an ihn als das Kernpasswort, das in Kombination mit den Seiten-Tags die Grundlage für jedes eindeutige Passwort bildet. Es ist ähnlich wie ein Schlüssel, der mehrere Schlösser öffnen kann, wenn er mit der richtigen Kombination verwendet wird.</p>
+<p>Zusammengefasst generieren unterschiedliche Kombinationen von Seiten-Tags und dem Master-Key verschiedene Passwörter. Dieses duale Komponentensystem erhöht die Sicherheit, indem eindeutige und starke Passwörter für jedes Ihrer Online-Konten erstellt werden und Ihre digitale Präsenz effektiv verwaltet wird.</p>
+<strong>Passwortgenerierungsalgorithmus:</strong>
+
+<p>Die Website verwendet eine Kombination aus dem vom Benutzer bereitgestellten Seiten-Tag und dem Master-Key, um eine Basis für jedes Passwort zu erstellen. Eine kryptografische Hash-Funktion, wie SHA-256, verarbeitet diese Basis, um eine einzigartige und komplexe Zeichenfolge zu generieren. Der Algorithmus wendet dann Regeln für die Zeichenvielfalt an, einschließlich der Verwendung von Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen, um ein Passwort mit der gewünschten Länge aus dieser komplexen Zeichenfolge zu extrahieren.</p>
+<strong>Lokale Verarbeitung zur Verbesserung der Sicherheit</strong>
+
+<p>Mit PasswordKey findet jeder Prozess zur Passwortgenerierung direkt auf Ihrem Gerät statt und wird nicht auf unseren Servern übertragen oder gespeichert, was die Sicherheit Ihrer Daten erheblich erhöht. Dies gewährleistet absolute Privatsphäre und Sicherheit während des gesamten Vorgangs.</p>
+<strong>Eindeutige Passwörter für jede Website</strong>
+
+<p>PasswordKey ermöglicht die Erstellung unterschiedlicher Passwörter für jedes Ihrer Online-Konten. Dieser Ansatz ist entscheidend, um Risiken im Zusammenhang mit einem kompromittierten Konto zu minimieren und effektiv einen Dominoeffekt zu verhindern, bei dem ein Verstoß mehrere Konten gefährden könnte. Durch die Sicherstellung, dass jedes Konto ein eindeutiges Passwort hat, wird die Gesamtsicherheit Ihrer digitalen Identität verbessert.</p>
+<strong>Vereinfachte Benutzererfahrung</strong>
+
+<p>PasswordKey kombiniert fortschrittliche Sicherheit mit einer benutzerfreundlichen Oberfläche und konzentriert sich in unserer Designphilosophie auf Einfachheit und Effektivität. Mit PasswordKey müssen Sie sich keine langen und komplexen Passwörter merken; geben Sie einfach bei jeder Verwendung denselben Tag und das Master-Passwort ein, und Ihr sicheres Passwort ist bereit. Diese Methode vereinfacht den gesamten Prozess und gewährleistet gleichzeitig Ihre Sicherheit.</p>
+<strong>Kontoschutz: Ihr digitaler Wächter</strong>
+
+<p>In der digitalen Welt ist die Sicherheit von Konten entscheidend. Wenn Sie PasswordKey wählen, entscheiden Sie sich für einen zuverlässigen Partner, der innovative Technologie mit einem tiefen Verständnis für Sicherheit kombiniert und einen robusten Schutz für Ihre digitale Identität bietet. Wir verpflichten uns dazu, die individuellen Sicherheitsbedürfnisse jedes Benutzers zu erfüllen und PasswordKey zu einem zuverlässigen Wächter in Ihrem digitalen Leben zu machen.</p>
+<strong>Langfristiges Serviceversprechen</strong>
+
+<p>PasswordKey verpflichtet sich, eine dauerhafte Lösung in Ihrem digitalen Leben zu sein. Unser Versprechen besteht darin, einen dauerhaften, zuverlässigen Service anzubieten, der über vorübergehende Lösungen hinausgeht. Hosted auf robusten Cloud-Diensten für kontinuierliche Zugänglichkeit, stellen wir sicher, dass PasswordKey ein zuverlässiges und kontinuierlich entwickelndes Werkzeug in der sich ständig verändernden digitalen Welt ist, unterstützt von der fortschrittlichen Technologie von ChatGPT.</p>
+		
+		</div>
+		<footer class="footer">
+            <p>© PasswordKey 2024. Alle Rechte vorbehalten.</p>
+<p>Wir speichern keine Passwörter.</p>
+
+        </footer>
+    </div>
+
+    <script src="password-generator.js" defer></script>
+	<script>
+    document.getElementById('language-selector').addEventListener('change', function(event) {
+        var selectedLang = event.target.value;
+        if (selectedLang === 'en') {
+            window.location.href = 'https://passwordkey.org/';
+        } else {
+            window.location.href = 'https://passwordkey.org/' + selectedLang + '/';
+        }
+    });
+</script>
+</body>
+</html>

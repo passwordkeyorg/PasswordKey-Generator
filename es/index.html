@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordKey - Generador avanzado de contraseñas para una protección en línea segura</title>
+	<meta name="description" content="Al integrar una contraseña maestra con etiquetas específicas del sitio, PasswordKey mejora su seguridad en línea y simplifica el proceso de gestión de contraseñas, cumpliendo con estrictos estándares de seguridad.">
+	<meta name="keywords" content="Generador de contraseñas, Contraseñas fuertes, Contraseña segura, Seguridad en línea, Gestión de contraseñas, Seguridad digital">
+	<meta name="author" content="PasswordKey.org Contenido completo del sitio desarrollado utilizando ChatGPT de OpenAI.">
+	<meta property="og:title" content="PasswordKey - Generador avanzado de contraseñas para una protección en línea segura">
+	<meta property="og:description" content="Cree contraseñas fuertes y únicas para todas sus cuentas con nuestro generador de contraseñas simple y seguro. Fácil de usar, difícil de descifrar." />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:url" content="https://passwordkey.org/" />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://passwordkey.org/" >
+	<meta property="twitter:title" content="PasswordKey - Generador de contraseñas seguro" />
+	<meta property="twitter:description" content="Genere contraseñas fuertes y únicas para todas sus cuentas con PasswordKey. Fácil, seguro y efectivo en la gestión de contraseñas." />
+    <meta property="twitter:image" content="/twitter-image.png" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://passwordkey.org/es">
+	<link rel="alternate" hreflang="en" href="https://passwordkey.org/" />
+	<link rel="alternate" hreflang="es" href="https://passwordkey.org/es/" />
+	<link rel="alternate" hreflang="de" href="https://passwordkey.org/de/" />
+	<link rel="alternate" hreflang="fr" href="https://passwordkey.org/fr/" />
+	<link rel="alternate" hreflang="zh" href="https://passwordkey.org/zh/" />
+	<link rel="alternate" hreflang="ar" href="https://passwordkey.org/ar/" />
+	<link rel="alternate" hreflang="hi" href="https://passwordkey.org/hi/" />
+	<link rel="alternate" hreflang="ja" href="https://passwordkey.org/ja/" />
+	<link rel="alternate" hreflang="pt" href="https://passwordkey.org/pt/" />
+	<link rel="alternate" hreflang="ru" href="https://passwordkey.org/ru/" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PasswordKey</h1>
+			<select id="language-selector" class="language-selector">
+				<option value="ar">Árabe - العربية</option>
+				<option value="zh">Chino - 中文</option>
+				<option value="en">Inglés - English</option>
+				<option value="fr">Francés - Français</option>
+				<option value="de">Alemán - Deutsch</option>
+				<option value="hi">Hindi - हिंदी</option>
+				<option value="ja">Japonés - 日本語</option>
+				<option value="pt">Portugués - Português</option>
+				<option value="ru">Ruso - Русский</option>
+				<option value="es" selected>Español</option>
+			</select>
+        </div>
+        
+        <form id="passwordForm" class="form-content">
+            <table>
+              <tbody>
+                <tr>
+  <td>
+    <label for="site-tag">Nombre de la contraseña (Etiqueta del sitio):</label>
+  </td>
+  <td>
+    <input type="text" id="site-tag" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="master-key">Clave maestra:</label>
+  </td>
+  <td>
+    <input type="password" id="master-key" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="password-length">Longitud de la contraseña: <span id="length-display">20</span></label>
+  </td>
+  <td>
+    <input
+      type="range"
+      id="password-length"
+      class="slider"
+      min="6"
+      max="32"
+      value="20"
+    />
+  </td>
+</tr>
+<tr>
+  <td class="generateButton-wrapper" colspan="2">
+    <button type="button" id="generateButton">Generar contraseña</button>
+  </td>
+</tr>
+
+                <tr>
+				<td class="output" colspan="2">
+					<span id="generated-password"></span>
+				</td>
+			</tr>
+              </tbody>
+            </table>
+          </form>
+          
+			<div class="description">
+            <strong>Acerca de PasswordKey</strong>
+
+			<p>El sitio web "PasswordKey" ofrece un enfoque innovador para mejorar tu seguridad digital. Combina de manera única el uso de una contraseña maestra y etiquetas de sitio distintas para gestionar y proteger tus cuentas en línea. Este sistema de doble componente simplifica la tarea de recordar numerosas contraseñas mientras mantiene un alto nivel de seguridad.</p>
+			<strong>Proceso de entrada del usuario:</strong>
+
+			<p>Nombre de la contraseña (Etiqueta del sitio): El Nombre de la contraseña, también conocido como Etiqueta del sitio, es un identificador único que los usuarios crean para cada una de sus contraseñas. Por ejemplo, un usuario podría usar "Correo electrónico" como etiqueta del sitio para su cuenta de correo electrónico y "Redes sociales" para su cuenta de redes sociales. Este sistema permite un reconocimiento y gestión sencillos de las contraseñas para diferentes servicios en línea.</p>
+			<p>Clave maestra: La Clave maestra es similar a una contraseña personal. Es una clave privada y segura que el usuario crea y recuerda. Piensa en ella como la contraseña principal que, combinada con las etiquetas de sitio, forma la base de cada contraseña única. Es similar a tener una llave que puede abrir múltiples cerraduras cuando se usa con la combinación correcta.</p>
+			<p>En resumen, diferentes combinaciones de etiquetas de sitio y la Clave maestra generan contraseñas diferentes. Este sistema de doble componente aumenta la seguridad al crear contraseñas únicas y sólidas para cada una de tus cuentas en línea, gestionando eficazmente tu presencia digital.</p>
+			<strong>Algoritmo de generación de contraseñas:</strong>
+
+			<p>El sitio web utiliza una combinación de la etiqueta de sitio proporcionada por el usuario y la Clave maestra para crear una entrada base para cada contraseña. Una función hash criptográfica, como SHA-256, procesa esta entrada base para generar una cadena única y compleja de caracteres. Luego, el algoritmo aplica reglas de diversidad de caracteres, incluyendo el uso de mayúsculas, minúsculas, números y caracteres especiales, para extraer una contraseña del tamaño deseado de esta cadena compleja.</p>
+			<strong>Procesamiento local para una mayor seguridad</strong>
+
+			<p>Con PasswordKey, cada proceso de generación de contraseñas se realiza directamente en tu dispositivo, sin que se transmita ni se almacene en nuestros servidores, lo que aumenta significativamente la seguridad de tus datos. Esto garantiza la privacidad y la seguridad absolutas durante todo el proceso.</p>
+			<strong>Contraseñas únicas para cada sitio</strong>
+
+			<p>PasswordKey permite la creación de contraseñas diferentes para cada una de tus cuentas en línea. Este enfoque es fundamental para minimizar los riesgos asociados con una cuenta comprometida, evitando eficazmente un efecto dominó en el que una violación podría poner en peligro múltiples cuentas. Al garantizar que cada cuenta tenga una contraseña única, mejoramos la seguridad general de tu identidad digital.</p>
+			<strong>Experiencia de usuario simplificada</strong>
+
+			<p>PasswordKey combina seguridad avanzada con una interfaz de usuario amigable, centrándose en la simplicidad y la eficacia en nuestra filosofía de diseño. Con PasswordKey, no es necesario recordar contraseñas largas y complejas; simplemente ingresa la misma etiqueta y contraseña maestra cada vez, y tu contraseña segura estará lista. Este método simplifica todo el proceso y garantiza que tu seguridad no se vea comprometida.</p>
+			<strong>Defensa de cuentas: Tu guardián digital</strong>
+
+			<p>En el mundo digital, la seguridad de las cuentas es esencial. Al elegir PasswordKey, estás seleccionando un compañero confiable que combina tecnología innovadora con un profundo entendimiento de la seguridad, proporcionando una protección sólida para tu identidad digital. Nos comprometemos a satisfacer las necesidades de seguridad personalizadas de cada usuario, haciendo de PasswordKey un guardián constante en tu vida digital.</p>
+			<strong>Compromiso de servicio a largo plazo</strong>
+
+			<p>PasswordKey se compromete a ser una solución duradera en tu vida digital. Nuestra promesa es ofrecer un servicio confiable y sostenido, yendo más allá de soluciones temporales. Alojado en servicios en la nube robustos para una accesibilidad constante, aseguramos que PasswordKey sea una herramienta confiable y en constante evolución en el cambiante mundo digital, respaldada por la tecnología avanzada de ChatGPT.</p>
+		
+		</div>
+		<footer class="footer">
+            <p>© PasswordKey 2024. Todos los derechos reservados.</p>
+<p>No almacenamos contraseñas.</p>
+
+        </footer>
+    </div>
+
+    <script src="password-generator.js" defer></script>
+	<script>
+    document.getElementById('language-selector').addEventListener('change', function(event) {
+        var selectedLang = event.target.value;
+        if (selectedLang === 'en') {
+            window.location.href = 'https://passwordkey.org/';
+        } else {
+            window.location.href = 'https://passwordkey.org/' + selectedLang + '/';
+        }
+    });
+</script>
+</body>
+</html>

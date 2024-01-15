@@ -20,6 +20,16 @@
     <meta property="twitter:image" content="/twitter-image.png" />   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="canonical" href="https://passwordkey.org/">
+	<link rel="alternate" hreflang="en" href="https://passwordkey.org/" />
+	<link rel="alternate" hreflang="es" href="https://passwordkey.org/es/" />
+	<link rel="alternate" hreflang="de" href="https://passwordkey.org/de/" />
+	<link rel="alternate" hreflang="fr" href="https://passwordkey.org/fr/" />
+	<link rel="alternate" hreflang="zh" href="https://passwordkey.org/zh/" />
+	<link rel="alternate" hreflang="ar" href="https://passwordkey.org/ar/" />
+	<link rel="alternate" hreflang="hi" href="https://passwordkey.org/hi/" />
+	<link rel="alternate" hreflang="ja" href="https://passwordkey.org/ja/" />
+	<link rel="alternate" hreflang="pt" href="https://passwordkey.org/pt/" />
+	<link rel="alternate" hreflang="ru" href="https://passwordkey.org/ru/" />
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
@@ -33,6 +43,20 @@
     <div class="container">
         <div class="header">
             <h1>PasswordKey</h1>
+			<select id="language-selector" class="language-selector">
+			<option value="ar">Arabic - العربية</option>
+			<option value="zh">Chinese - 中文</option>
+			<option value="en" selected>English</option>
+			<option value="fr">French - Français</option>
+			<option value="de">German - Deutsch</option>
+			<option value="hi">Hindi - हिंदी</option>
+			<option value="ja">Japanese - 日本語</option>
+			<option value="pt">Portuguese - Português</option>
+			<option value="ru">Russian - Русский</option>
+			<option value="es">Spanish - Español</option>
+			</select>
+
+
         </div>
         
         <form id="passwordForm" class="form-content">
@@ -117,10 +141,15 @@
 		</div>
 		<footer class="footer">
             <p>© PasswordKey 2024. All rights reserved.</p>
-            <p>Entire website content developed using ChatGPT by OpenAI.</p>
+            <p>We do not store any passwords.</p>
         </footer>
     </div>
 
     <script src="password-generator.js" defer></script>
+	<script>
+        document.getElementById('language-selector').addEventListener('change', function(event) {
+            window.location.href = '/' + event.target.value;
+        });
+    </script>
 </body>
 </html>

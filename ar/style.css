@@ -9,6 +9,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+	direction: rtl;
+	text-align: right;
 }
 
 .container {
@@ -163,7 +165,7 @@ button:hover {
 }
 
 #passwordForm td.generateButton-wrapper{
-    text-align: right;
+    text-align: left;
 }
 .footer {
     text-align: center;

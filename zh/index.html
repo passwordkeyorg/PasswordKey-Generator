@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordKey - 高级密码生成器，确保在线安全保护</title>
+	<meta name="description" content="PasswordKey通过将主密码与特定站点标签相结合，提高了您的在线安全性并简化了密码管理过程，符合严格的安全标准。">
+	<meta name="keywords" content="密码生成器，强密码，安全密码，在线安全，密码管理，数字安全">
+	<meta name="author" content="PasswordKey.org 整个网站内容使用OpenAI的ChatGPT开发。">
+	<meta property="og:title" content="PasswordKey - 高级密码生成器，确保在线安全保护">
+	<meta property="og:description" content="使用我们简单而安全的密码生成器为所有您的帐户创建强大且独特的密码。易于使用，难以破解。" />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:url" content="https://passwordkey.org/" />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://passwordkey.org/" >
+	<meta property="twitter:title" content="PasswordKey - 安全密码生成器" />
+	<meta property="twitter:description" content="使用PasswordKey为所有您的帐户创建强大而独特的密码。简单、安全且有效的密码管理。" />
+    <meta property="twitter:image" content="/twitter-image.png" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://passwordkey.org/zh/">
+	<link rel="alternate" hreflang="en" href="https://passwordkey.org/" />
+	<link rel="alternate" hreflang="es" href="https://passwordkey.org/es/" />
+	<link rel="alternate" hreflang="de" href="https://passwordkey.org/de/" />
+	<link rel="alternate" hreflang="fr" href="https://passwordkey.org/fr/" />
+	<link rel="alternate" hreflang="zh" href="https://passwordkey.org/zh/" />
+	<link rel="alternate" hreflang="ar" href="https://passwordkey.org/ar/" />
+	<link rel="alternate" hreflang="hi" href="https://passwordkey.org/hi/" />
+	<link rel="alternate" hreflang="ja" href="https://passwordkey.org/ja/" />
+	<link rel="alternate" hreflang="pt" href="https://passwordkey.org/pt/" />
+	<link rel="alternate" hreflang="ru" href="https://passwordkey.org/ru/" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PasswordKey</h1>
+			<select id="language-selector" class="language-selector">
+				<option value="ar">阿拉伯语 - العربية</option>
+				<option value="zh" selected>中文</option>
+				<option value="en">英语 - English</option>
+				<option value="fr">法语 - Français</option>
+				<option value="de">德语 - Deutsch</option>
+				<option value="hi">印地语 - हिंदी</option>
+				<option value="ja">日语 - 日本語</option>
+				<option value="pt">葡萄牙语 - Português</option>
+				<option value="ru">俄语 - Русский</option>
+				<option value="es">西班牙语 - Español</option>
+			</select>
+        </div>
+        
+        <form id="passwordForm" class="form-content">
+            <table>
+              <tbody>
+                <tr>
+				<td>
+					<label for="site-tag">密码名称（站点标签）：</label>
+					</td>
+					<td>
+					<input type="text" id="site-tag" required />
+					</td>
+					</tr>
+					<tr>
+				<td>
+				<label for="master-key">主密码：</label>
+			</td>
+				<td>
+			<input type="password" id="master-key" required />
+			</td>
+			</tr>
+				<tr>
+			<td>
+    <label for="password-length">密码长度：<span id="length-display">20</span></label>
+  </td>
+  <td>
+    <input
+      type="range"
+      id="password-length"
+      class="slider"
+      min="6"
+      max="32"
+      value="20"
+    />
+  </td>
+</tr>
+<tr>
+  <td class="generateButton-wrapper" colspan="2">
+    <button type="button" id="generateButton">生成密码</button>
+  </td>
+</tr>
+
+                <tr>
+				<td class="output" colspan="2">
+					<span id="generated-password"></span>
+				</td>
+			</tr>
+              </tbody>
+            </table>
+          </form>
+          
+			<div class="description">
+            <strong>关于PasswordKey</strong>
+
+			<p>"PasswordKey" 网站提供了一种创新的方法来增强您的数字安全性。它独特地结合了使用主密码和不同的站点标签来管理和保护您的在线账户。这个双组件系统简化了记住众多密码的任务，同时保持了高水平的安全性。</p>
+			<strong>用户输入过程:</strong>
+
+			<p>密码名称（站点标签）: 密码名称，也称为站点标签，是用户为他们的每个密码创建的唯一标识符。例如，用户可能将“Email”用作他们的电子邮件账户的站点标签，将“社交媒体”用于他们的社交媒体账户。这个系统允许轻松识别和管理不同在线服务的密码。</p>
+			<p>主密码: 主密码类似于个人密码。它是用户创建并记住的私密和安全密钥。可以将其视为核心密码，与站点标签结合使用，为每个唯一密码构建基础。这类似于只有一个钥匙，当与正确的组合一起使用时，可以打开多个锁。</p>
+			<p>总之，不同的站点标签和主密码的组合会生成不同的密码。这个双组件系统通过为您的每个在线账户创建独特和强大的密码来增强安全性，有效管理您的数字足迹。</p>
+			<strong>密码生成算法:</strong>
+
+			<p>该网站利用用户提供的站点标签和主密码的组合来创建每个密码的基本输入。一个密码哈希函数，如SHA-256，会处理这个基本输入，生成一个独特和复杂的字符串。然后，算法会应用字符多样性规则，包括使用大写字母、小写字母、数字和特殊字符，从这个复杂的字符串中提取所需长度的密码。</p>
+			<strong>本地处理以增强安全性</strong>
+
+			<p>使用PasswordKey，每个密码生成过程都会直接在您的设备上进行，不会传输或存储在我们的服务器上，从而显著提高了您数据的安全性。这确保了在整个过程中的绝对隐私和安全性。</p>
+			<strong>每个站点的独特密码</strong>
+
+			<p>PasswordKey使您能够为您的每个在线账户创建不同的密码。这种方法对于最小化与单个被攻破的账户相关的风险至关重要，有效地防止了一次破坏可能危及多个账户的连锁效应。通过确保每个账户都有一个独特的密码，我们增强了您数字身份的整体安全性。</p>
+			<strong>简化的用户体验</strong>
+
+			<p>PasswordKey将高级安全性与用户友好的界面相结合，专注于我们的设计哲学中的简单性和有效性。使用PasswordKey，您不需要记住长而复杂的密码；只需每次输入相同的标签和主密码，您的安全密码就准备好了。这种方法简化了整个过程，同时确保您的安全性不会受到威胁。</p>
+			<strong>账户防御: 您的数字卫士</strong>
+
+			<p>在数字世界中，账户安全至关重要。通过选择PasswordKey，您选择了一个可靠的伙伴，将创新技术与对安全性的深刻理解相结合，为您的数字身份提供强大的保护。我们致力于满足每个用户的个性化安全需求，使PasswordKey成为您数字生活中坚定的守护者。</p>
+			<strong>长期服务承诺</strong>
+
+			<p>PasswordKey致力于成为您数字生活中的持久解决方案。我们的承诺是提供持续可靠的服务，超越了临时解决方案。我们托管在强大的云服务上，以确保PasswordKey是在不断变化的数字世界中可靠且不断发展的工具，由ChatGPT的先进技术支持。</p>
+		
+		</div>
+		<footer class="footer">
+            <p>© 2024 PasswordKey. 保留所有权利。</p>
+<p>我们不存储任何密码</p>
+
+        </footer>
+    </div>
+
+    <script src="password-generator.js" defer></script>
+	<script>
+    document.getElementById('language-selector').addEventListener('change', function(event) {
+        var selectedLang = event.target.value;
+        if (selectedLang === 'en') {
+            window.location.href = 'https://passwordkey.org/';
+        } else {
+            window.location.href = 'https://passwordkey.org/' + selectedLang + '/';
+        }
+    });
+</script>
+
+</body>
+</html>

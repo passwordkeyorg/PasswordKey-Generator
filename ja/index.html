@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordKey - 安全なオンライン保護のための高度なパスワードジェネレーター</title>
+	<meta name="description" content="マスターパスワードと特定のサイトタグを組み合わせることで、PasswordKeyはオンラインセキュリティを向上させ、厳格なセキュリティ基準を遵守しながらパスワード管理プロセスを簡素化します。">
+	<meta name="keywords" content="パスワードジェネレーター、強力なパスワード、安全なパスワード、オンラインセキュリティ、パスワード管理、デジタルセーフティ">
+	<meta name="author" content="PasswordKey.org サイト全体のコンテンツはOpenAIのChatGPTを使用して開発されました。">
+	<meta property="og:title" content="PasswordKey - 安全なオンライン保護のための高度なパスワードジェネレーター">
+	<meta property="og:description" content="シンプルで安全なパスワードジェネレーターを使用して、すべてのアカウント用に強力でユニークなパスワードを作成します。使いやすく、解読が難しいです。" />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:url" content="https://passwordkey.org/" />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://passwordkey.org/" >
+	<meta property="twitter:title" content="PasswordKey - 安全なパスワードジェネレーター" />
+	<meta property="twitter:description" content="PasswordKeyを使用して、すべてのアカウント用に強力でユニークなパスワードを生成します。簡単、安全、パスワード管理に効果的です。" />
+    <meta property="twitter:image" content="/twitter-image.png" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://passwordkey.org/ja/">
+	<link rel="alternate" hreflang="en" href="https://passwordkey.org/" />
+	<link rel="alternate" hreflang="es" href="https://passwordkey.org/es/" />
+	<link rel="alternate" hreflang="de" href="https://passwordkey.org/de/" />
+	<link rel="alternate" hreflang="fr" href="https://passwordkey.org/fr/" />
+	<link rel="alternate" hreflang="zh" href="https://passwordkey.org/zh/" />
+	<link rel="alternate" hreflang="ar" href="https://passwordkey.org/ar/" />
+	<link rel="alternate" hreflang="hi" href="https://passwordkey.org/hi/" />
+	<link rel="alternate" hreflang="ja" href="https://passwordkey.org/ja/" />
+	<link rel="alternate" hreflang="pt" href="https://passwordkey.org/pt/" />
+	<link rel="alternate" hreflang="ru" href="https://passwordkey.org/ru/" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://passwordkey.org/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PasswordKey</h1>
+			<select id="language-selector" class="language-selector">
+				<option value="ar">アラビア語 - العربية</option>
+				<option value="zh">中国語 - 中文</option>
+				<option value="en">英語 - English</option>
+				<option value="fr">フランス語 - Français</option>
+				<option value="de">ドイツ語 - Deutsch</option>
+				<option value="hi">ヒンディー語 - हिंदी</option>
+				<option value="ja" selected>日本語</option>
+				<option value="pt">ポルトガル語 - Português</option>
+				<option value="ru">ロシア語 - Русский</option>
+				<option value="es">スペイン語 - Español</option>
+			</select>
+        </div>
+        
+        <form id="passwordForm" class="form-content">
+            <table>
+              <tbody>
+                <tr>
+  <td>
+    <label for="site-tag">パスワード名（サイトタグ）：</label>
+  </td>
+  <td>
+    <input type="text" id="site-tag" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="master-key">マスターキー：</label>
+  </td>
+  <td>
+    <input type="password" id="master-key" required />
+  </td>
+</tr>
+<tr>
+  <td>
+    <label for="password-length">パスワードの長さ：<span id="length-display">20</span></label>
+  </td>
+  <td>
+    <input
+      type="range"
+      id="password-length"
+      class="slider"
+      min="6"
+      max="32"
+      value="20"
+    />
+  </td>
+</tr>
+<tr>
+  <td class="generateButton-wrapper" colspan="2">
+    <button type="button" id="generateButton">パスワードを生成</button>
+  </td>
+</tr>
+
+                <tr>
+				<td class="output" colspan="2">
+					<span id="generated-password"></span>
+				</td>
+			</tr>
+              </tbody>
+            </table>
+          </form>
+          
+			<div class="description">
+            <strong>PasswordKeyについて</strong>
+
+			<p>"PasswordKey"ウェブサイトは、デジタルセキュリティを向上させる革新的なアプローチを提供しています。これは、マスターパスワードと異なるサイトタグの使用をユニークに組み合わせ、オンラインアカウントを管理し、保護するものです。この二要素認証システムは、多くのパスワードを覚える作業を簡素化しながら高いセキュリティレベルを維持します。</p>
+			<strong>ユーザーの入力プロセス：</strong>
+
+			<p>パスワード名（サイトタグ）：パスワード名、またはサイトタグとしても知られるものは、ユーザーが各パスワードに作成するユニークな識別子です。たとえば、ユーザーはメールアカウントのために "Eメール" というサイトタグを使用し、ソーシャルメディアアカウントのために "ソーシャルメディア" を使用するかもしれません。このシステムは、さまざまなオンラインサービスのパスワードを簡単に識別し、管理することを可能にします。</p>
+			<p>マスターキー：マスターキーは個人用のパスワードに似ています。これはユーザーが作成し、覚えるプライベートで安全なキーです。これは、サイトタグと組み合わせて各ユニークなパスワードの基礎を形成する核心のパスワードと考えてください。それは正しい組み合わせで使用すると複数の鍵を開けることができる1つの鍵のようです。</p>
+			<p>要するに、サイトタグとマスターキーの異なる組み合わせが異なるパスワードを生成します。この二要素認証システムは、オンラインアカウントごとにユニークで強力なパスワードを生成することでセキュリティを向上させ、デジタルの足跡を効果的に管理します。</p>
+			<strong>パスワード生成アルゴリズム：</strong>
+
+			<p>このウェブサイトでは、ユーザーが提供したサイトタグとマスターキーの組み合わせを使用して、各パスワードのベース入力を作成します。SHA-256などの暗号ハッシュ関数は、このベース入力を処理して一意で複雑な文字列を生成します。その後、アルゴリズムは、大文字、小文字、数字、特殊文字の使用を含む文字の多様性のルールを適用し、この複雑な文字列から所望の長さのパスワードを抽出します。</p>
+			<strong>強化されたセキュリティのためのローカル処理</strong>
+
+			<p>PasswordKeyでは、すべてのパスワード生成プロセスがデバイス上で直接行われ、サーバーに送信されることなく保存されることなく、データのセキュリティを大幅に向上させています。これにより、プロセス全体で絶対のプライバシーとセキュリティが確保されます。</p>
+			<strong>各サイト用のユニークなパスワード</strong>
+
+			<p>PasswordKeyは、各オンラインアカウントに異なるパスワードを作成できるようにします。このアプローチは、単一の危険なアカウントを最小限に抑え、1つの侵害が複数のアカウントを危険にさらすドミノ効果を効果的に防ぐために重要です。各アカウントに一意のパスワードがあることを保証することで、デジタルアイデンティティの全体的な安全性が向上します。</p>
+			<strong>効率的なユーザーエクスペリエンス</strong>
+
+			<p>PasswordKeyは高度なセキュリティと使いやすいインターフェースを組み合わせ、デザイン哲学でシンプリシティと効果を重視しています。PasswordKeyを使用すると、長くて複雑なパスワードを覚える必要はありません。毎回同じタグとマスターキーを入力するだけで、セキュアなパスワードが準備されます。この方法はプロセス全体を簡素化し、セキュリティが危険にさらされないようにします。</p>
+			<strong>アカウトディフェンス：デジタルガード</strong>
+
+			<p>デジタル世界では、アカウントのセキュリティが重要です。PasswordKeyを選択することで、革新的な技術とセキュリティの深い理解を組み合わせた信頼性のあるパートナーを選択しています。私たちは各ユーザーの個別のセキュリティニーズを満たすことを約束し、PasswordKeyをあなたのデジタルライフの堅守の守護者にします。</p>
+			<strong>長期のサービスコミットメント</strong>
+
+			<p>PasswordKeyはあなたのデジタルライフにおける耐久性のある解決策であることにコミットしています。私たちの約束は、一時的な解決策を超える持続的で信頼性のあるサービスを提供することです。一貫したアクセス性を持つ堅牢なクラウドサービスにホストされており、PasswordKeyが常に進化し続ける信頼性のあるツールであることを確認しています。ChatGPTの高度なテクノロジーに支えられています。</p>
+		
+		</div>
+		<footer class="footer">
+            <p>© PasswordKey 2024. 全著作権所有。</p>
+<p>私たちはパスワードを保存しません。</p>
+
+        </footer>
+    </div>
+
+    <script src="password-generator.js" defer></script>
+	<script>
+    document.getElementById('language-selector').addEventListener('change', function(event) {
+        var selectedLang = event.target.value;
+        if (selectedLang === 'en') {
+            window.location.href = 'https://passwordkey.org/';
+        } else {
+            window.location.href = 'https://passwordkey.org/' + selectedLang + '/';
+        }
+    });
+</script>
+</body>
+</html>
